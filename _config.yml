@@ -6,13 +6,13 @@ favicon: images/favicon.ico
 version: 2
 
 # Personal info
-name: Elwil Reyes
+name: Will Reyes
 title: Helpdesk Analyst / Cybersecurity Enthusiast 
 email: reyeselwil@gmail.com
 website: https://willirey.github.io/Resume/
 
 # Dark Mode (true/false/never)
-darkmode: true
+darkmode: false
 
 # Social links
 twitter_username: facespics
