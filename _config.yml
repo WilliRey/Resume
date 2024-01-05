@@ -85,6 +85,16 @@ content:
         description: | # this will include new lines to allow paragraphs
             As part of the Helpdesk team, I am the first response for users that might be facing hardware or software issues for all of our US locations.
             I am responsible for providing efficient and reliable support while maintaining SLA, and using ManageEngine or Service Now to maintain proper ticketing documentation
+      - layout: left
+        title: Actylis
+        link: Actylis.com
+        # link_text: rwe.com
+        sub_title: Helpdesk Technician
+        caption: October 2023 > Present
+        description: | # this will include new lines to allow paragraphs
+            As part of the Helpdesk team, I am the first response for users that might be facing hardware or software issues for all of our US locations.
+            I am responsible for providing efficient and reliable support while maintaining SLA, and using ManageEngine or Service Now to maintain proper ticketing documentation
+        
         
 
   - title: Education # Title for the section
