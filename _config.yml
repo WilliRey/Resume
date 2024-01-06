@@ -47,7 +47,7 @@ additional_links:
 
 # About Section
 # about_title: About Me
-about_profile_image: images/profile.jpg
+about_profile_image: images/profile.jpeg
 about_content: | # this will include new lines to allow paragraphs
   Hi, my name's Will and I'm a Helpdesk Analyst with a strong interest in cybersecurity. I troubleshoot and fix issues for 1000+ end users, I have experience working with Office365, Citrix, Falcon Crowdstrike, Mimecast,
   Azure/Active Directory, remote tools. 
@@ -108,6 +108,10 @@ content:
         title: Nassau Community College
         caption: 2019
         sub_title: Information Technology (A.A.S)  
+      - layout: left
+        title: Cisco CCNA
+        caption: Expire - 
+        sub_title: Information Technology (A.A.S) 
 
   - title: A Little More About Me
     layout: text
