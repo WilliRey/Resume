@@ -47,7 +47,7 @@ additional_links:
 
 # About Section
 # about_title: About Me
-about_profile_image: images/Profile.jpeg
+about_profile_image: WilliRey/Resume/images/Profile.jpg
 about_content: | # this will include new lines to allow paragraphs
   Hi, my name's Will and I'm a Helpdesk Analyst with a strong interest in cybersecurity. I troubleshoot and fix issues for 1000+ end users, I have experience working with Office365, Citrix, Falcon Crowdstrike, Mimecast,
   Azure/Active Directory, remote tools. 
