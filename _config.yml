@@ -70,7 +70,7 @@ content:
           #   url: Link to project (eg. sproogen.github.io/modern-resume-theme)
         quote: >
           In this lab I use Microsoft Sentinel and Azure to log Failed RDP attempts and plot it attackers IP addresses to a map.
-        description: | # this will include new lines to allow paragraphs
+        description: > # this will include new lines to allow paragraphs
           I started this project as a way to gain Azure experience as well as gaining expirience working with logs withing a Siem.  
 
   - title: Experience # Title for the section
