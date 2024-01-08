@@ -10,6 +10,7 @@ name: Will Reyes
 title: Helpdesk Analyst / Cybersecurity Enthusiast 
 email: reyeselwil@gmail.com
 website: https://willirey.github.io/Resume/
+Tryhackme: ![tryhackme stats](https://raw.githubusercontent.com/reyeselwil/reyeselwil/master/assets/thm_propic.png)
 
 
 
@@ -35,9 +36,6 @@ additional_links:
 - title: itsgoingto.be
   icon: fas fa-globe
   url: https://www.itsgoingto.be
-- title: Try Hack me
-  icon: ![tryhackme stats](https://raw.githubusercontent.com/reyeselwil/reyeselwil/master/assets/thm_propic.png)
-  url: ![tryhackme stats](https://raw.githubusercontent.com/reyeselwil/reyeselwil/master/assets/thm_propic.png)
 
 # Google Analytics and Tag Manager
 # Using more than one of these may cause issues with reporting
