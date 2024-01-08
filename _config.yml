@@ -52,6 +52,7 @@ about_content: | # this will include new lines to allow paragraphs
   Hi, my name's Will and I'm a Helpdesk Analyst with a strong interest in cybersecurity. I troubleshoot and fix issues for 1000+ end users, I have experience working with Office365, Citrix, Falcon Crowdstrike, Mimecast,
   Azure/Active Directory, remote tools. 
   I am most skilled in: <mark>remote troubleshooting</mark> and <mark>eating pasta</mark>
+![tryhackme stats](https://raw.githubusercontent.com/reyeselwil/reyeselwil/master/assets/thm_propic.png)
 
 content:
   - title: Projects # Title for the section
@@ -91,10 +92,9 @@ content:
         link: Actylis.com
         # link_text: rwe.com
         sub_title: Helpdesk Technician
-        caption: October 2023 > Present
+        caption: October 2021 > October 2023
         description: | # this will include new lines to allow paragraphs
-            As part of the Helpdesk team, I am the first response for users that might be facing hardware or software issues for all of our US locations.
-            I am responsible for providing efficient and reliable support while maintaining SLA, and using ManageEngine or Service Now to maintain proper ticketing documentation
+            As a helpdesk Tech at
         
         
 
@@ -123,8 +123,6 @@ content:
       - cars
       - MMA
 
-      Look at this cool image  
-      ![Trees](/modern-resume-theme/images/landscape-trees.jpg "Trees")
 
 # Footer
 footer_show_references: true
