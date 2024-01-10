@@ -32,9 +32,9 @@ linkedin_username: will-reyes-a057b2176
 
 # Additional icon links
 additional_links:
-- title: itsgoingto.be
+- title: TryHackMe
   icon: fas fa-globe
-  url: https://www.itsgoingto.be
+  url: https://tryhackme.com/p/reyeselwil
 
 # Google Analytics and Tag Manager
 # Using more than one of these may cause issues with reporting
