@@ -57,7 +57,7 @@ content:
     content:
       - layout: top-middle
         title: Honeypot Lab 
-        link: github.com/willirey
+        link: github.com/willirey/Azure-Honeypot-Lab
         # link_text: Project Website
         additional_links:
           - title:  Willirey/Azure-Honeypot-Lab
@@ -71,6 +71,23 @@ content:
         description: > # this will include new lines to allow paragraphs
           I started this project as a way to gain Azure experience as well as gaining expirience working with logs withing a Siem.
           Additionally, was able to practice a bit using powershell scripts 
+      
+      - layout: top-middle
+        title: Homelab 
+        link: github.com/willirey/Homelab
+        # link_text: Project Website
+        additional_links:
+          - title:  Willirey/Azure-Honeypot-Lab
+            icon: fab fa-github
+            url: github.com/WilliRey/HomeLab
+          # - title:  Github page for project (eg. sproogen/modern-resume-theme)
+          #   icon: fab fa-github
+          #   url: Link to project (eg. sproogen.github.io/modern-resume-theme)
+        quote: >
+          In this project I use a Lenovo Thinkcentre PC with Proxmox to build my own virtualization server. 
+        description: > # this will include new lines to allow paragraphs
+          This hands-on setup allows me to explore, experiment, and gain practical experience in a controlled setting,
+          enhancing my proficiency in these crucial aspects of IT infrastructure: Virtualization, Network Management, Security and Storage Solutions
 
   - title: Experience # Title for the section
     layout: list # Type of content section (list/text)
