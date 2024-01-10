@@ -87,7 +87,7 @@ content:
       - layout: left
         title: Actylis
         link: Actylis.com
-        # link_text: rwe.com
+        # link_text: actylis.com
         sub_title: Helpdesk Technician
         caption: October 2021 > October 2023
         description: | # this will include new lines to allow paragraphs
@@ -95,8 +95,25 @@ content:
             and Asia. Monitored and enhanced performance and security for 150+ hosts and servers using Crowdstrike Falcon, actively detecting and patching vulnerabilities.
             Proactively thwarted phishing attempts through Mimecast email monitoring. Managed IT equipment procurement, documentation, and guide creation while serving
              as the primary contact for Sharepoint/OneDrive requests. Successfully led the migration of on-premises file servers to Sharepoint and transitioned 90+ hosts to Microsoft Intune and Autopilot.
-        
-        
+      - layout: left
+        title: A & A Industrial
+        link: http://www.aanassau.com/
+        # link_text: aanassau.com/
+        sub_title: Sales Coordinator
+        caption: July 2020 > October 2021
+        description: | # this will include new lines to allow paragraphs
+            Conducted daily consultations with 10+ client companies to ascertain equipment requirements. Collaborated with 20+ distributors to obtain pricing,
+            availability information, and manage inventory orders. Addressed basic IT, networking, and software issues in a small office environment.
+      - layout: left
+        title: Triwire Engineering solutions
+        # link: 
+        # link_text:
+        sub_title: Installation Technician
+        caption: December 2019 > July 2020
+        description: | # this will include new lines to allow paragraphs
+            Modify equipment to improve performance or meet customer specifications. Install communication equipment, including data and telephone lines, wiring,
+            network modems, and routers. Effectively troubleshoot an average of 15 daily customer connection issues, prioritizing excellent customer service.
+  
 
   - title: Education # Title for the section
     layout: list # Type of content section (list/text)
