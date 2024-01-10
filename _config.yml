@@ -94,7 +94,7 @@ content:
             Efficiently addressed support tickets and provided troubleshooting for the main organization and 14 remote offices across North America, Europe,
             and Asia. Monitored and enhanced performance and security for 150+ hosts and servers using Crowdstrike Falcon, actively detecting and patching vulnerabilities.
             Proactively thwarted phishing attempts through Mimecast email monitoring. Managed IT equipment procurement, documentation, and guide creation while serving
-            as the primary contact for Sharepoint/OneDrive requests. Successfully led the migration of on-premises file servers to Sharepoint and transitioned 90+ hosts to Microsoft Intune and Autopilot.
+             as the primary contact for Sharepoint/OneDrive requests. Successfully led the migration of on-premises file servers to Sharepoint and transitioned 90+ hosts to Microsoft Intune and Autopilot.
         
         
 
@@ -111,8 +111,16 @@ content:
         sub_title: Information Technology (A.A.S)  
       - layout: left
         title: Cisco CCNA
-        caption: Expire - 
-        sub_title: Information Technology (A.A.S) 
+        caption: Expires - January 2026
+        sub_title: Credential ID CSCO14034172
+      - layout: left
+        title: Comptia Security+ 
+        caption: Expires - July 2025
+        sub_title: Credential ID COMP001021102092
+      - layout: left
+        title: Comptia A+
+        caption: Expires - July 2025
+        sub_title: Credential ID COMP001021102092
 
   - title: A Little More About Me
     layout: text
