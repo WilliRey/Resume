@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Will Reyes | IT Engineer & Security Professional</title>
+<style>
+  :root{
+    --bg:#0f1117;--surface:#1a1d27;--surface2:#22263a;
+    --accent:#4f8ef7;--accent2:#7c3aed;
+    --text:#e8eaf0;--muted:#8b90a7;--border:#2a2d3e;
+    --radius:10px;--font:'Segoe UI',system-ui,sans-serif;
+  }
+  .light{
+    --bg:#f4f6fb;--surface:#fff;--surface2:#eef1f8;
+    --text:#1a1d27;--muted:#5a5f7a;--border:#d4d8eb;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.6;transition:background .3s,color .3s}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:99;background:var(--bg);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+  .nav-logo{font-weight:700;font-size:1rem;letter-spacing:.5px}
+  .nav-logo span{color:var(--accent)}
+  .nav-links{display:flex;gap:1.5rem;list-style:none;font-size:.88rem}
+  .nav-links a{color:var(--muted);transition:color .2s}
+  .nav-links a:hover{color:var(--text);text-decoration:none}
+  #themeBtn{background:none;border:1px solid var(--border);color:var(--muted);padding:.3rem .7rem;border-radius:6px;cursor:pointer;font-size:.82rem;transition:all .2s}
+  #themeBtn:hover{border-color:var(--accent);color:var(--accent)}
+
+  /* HERO */
+  .hero{max-width:900px;margin:0 auto;padding:5rem 2rem 4rem}
+  .hero-tag{display:inline-block;background:var(--surface2);color:var(--accent);font-size:.78rem;font-weight:600;padding:.3rem .8rem;border-radius:20px;letter-spacing:.8px;text-transform:uppercase;margin-bottom:1.2rem}
+  .hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.15;margin-bottom:.8rem}
+  .hero h1 span{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .hero-sub{color:var(--muted);font-size:1.05rem;max-width:560px;margin-bottom:2rem}
+  .hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:.4rem;padding:.65rem 1.3rem;border-radius:var(--radius);font-size:.9rem;font-weight:600;cursor:pointer;transition:all .2s;border:none;text-decoration:none}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:#3a7be0;text-decoration:none}
+  .btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+
+  /* SECTION */
+  section{max-width:900px;margin:0 auto;padding:3.5rem 2rem}
+  .section-label{font-size:.78rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
+  .section-title{font-size:1.6rem;font-weight:800;margin-bottom:2rem}
+  hr.divider{border:none;border-top:1px solid var(--border);margin:0}
+
+  /* CERTS / SKILLS */
+  .certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+  .cert-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.1rem;display:flex;align-items:center;gap:.85rem;transition:border-color .2s}
+  .cert-card:hover{border-color:var(--accent)}
+  .cert-icon{font-size:1.5rem;width:40px;text-align:center}
+  .cert-name{font-size:.88rem;font-weight:700}
+  .cert-sub{font-size:.75rem;color:var(--muted)}
+  .cert-badge{font-size:.68rem;font-weight:700;padding:.15rem .5rem;border-radius:20px;margin-top:.25rem;display:inline-block}
+  .badge-active{background:#1a3a1a;color:#4caf50}
+  .light .badge-active{background:#e8f5e9;color:#2e7d32}
+  .badge-renew{background:#3a2a1a;color:#ff9800}
+  .light .badge-renew{background:#fff3e0;color:#e65100}
+
+  .skills-grid{display:flex;flex-wrap:wrap;gap:.6rem}
+  .skill-pill{background:var(--surface2);color:var(--text);font-size:.82rem;padding:.35rem .85rem;border-radius:20px;border:1px solid var(--border)}
+
+  /* EXPERIENCE */
+  .timeline{display:flex;flex-direction:column;gap:0}
+  .tl-item{display:grid;grid-template-columns:140px 1fr;gap:1.5rem;padding:1.5rem 0;border-bottom:1px solid var(--border)}
+  .tl-item:last-child{border-bottom:none}
+  .tl-date{font-size:.8rem;color:var(--muted);padding-top:.2rem;line-height:1.5}
+  .tl-company{font-size:.78rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:.25rem}
+  .tl-role{font-size:1rem;font-weight:700;margin-bottom:.15rem}
+  .tl-desc{font-size:.88rem;color:var(--muted);line-height:1.65}
+  .tl-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.65rem}
+  .tl-tag{font-size:.72rem;background:var(--surface2);padding:.2rem .6rem;border-radius:20px;color:var(--muted);border:1px solid var(--border)}
+
+  /* PROJECTS */
+  .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.2rem}
+  .proj-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.4rem;display:flex;flex-direction:column;gap:.5rem;transition:border-color .2s,transform .2s}
+  .proj-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .proj-header{display:flex;justify-content:space-between;align-items:flex-start}
+  .proj-icon{font-size:1.4rem}
+  .proj-link{font-size:.8rem;color:var(--accent)}
+  .proj-name{font-size:1rem;font-weight:700}
+  .proj-desc{font-size:.85rem;color:var(--muted);line-height:1.6;flex:1}
+  .proj-stack{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.4rem}
+  .proj-tag{font-size:.7rem;background:var(--surface2);padding:.18rem .55rem;border-radius:20px;color:var(--muted);border:1px solid var(--border)}
+
+  /* EDUCATION */
+  .edu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+  .edu-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem}
+  .edu-school{font-size:.78rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:.25rem}
+  .edu-degree{font-size:.92rem;font-weight:700}
+  .edu-year{font-size:.8rem;color:var(--muted);margin-top:.2rem}
+
+  /* CONTACT */
+  .contact-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between}
+  .contact-text h3{font-size:1.2rem;font-weight:800;margin-bottom:.4rem}
+  .contact-text p{font-size:.9rem;color:var(--muted)}
+  .contact-links{display:flex;gap:.8rem;flex-wrap:wrap}
+
+  /* FOOTER */
+  footer{text-align:center;padding:2rem;font-size:.8rem;color:var(--muted);border-top:1px solid var(--border)}
+
+  @media(max-width:600px){
+    .tl-item{grid-template-columns:1fr}
+    .tl-date{padding-top:0}
+    .nav-links{display:none}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">WR<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="#certs">Certs</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button id="themeBtn" onclick="toggleTheme()">☀ Light</button>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-tag">Open to New Opportunities</div>
+  <h1>Will Reyes<br><span>IT Engineer & Security Professional</span></h1>
+  <p class="hero-sub">Tier-2/3 IT Engineer at RWE Clean Energy — specializing in endpoint management, enterprise security, and automation. CISSP certified. Targeting cybersecurity, cloud, and DevSecOps roles.</p>
+  <div class="hero-btns">
+    <a class="btn btn-primary" href="https://github.com/willirey" target="_blank">⬡ GitHub</a>
+    <a class="btn btn-ghost" href="mailto:reyeselwil@gmail.com">✉ Get In Touch</a>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- CERTS -->
+<section id="certs">
+  <div class="section-label">Credentials</div>
+  <div class="section-title">Certifications & Skills</div>
+
+  <div class="certs-grid" style="margin-bottom:2rem">
+    <div class="cert-card">
+      <div class="cert-icon">🔐</div>
+      <div>
+        <div class="cert-name">CISSP</div>
+        <div class="cert-sub">ISC²</div>
+        <div class="cert-badge badge-active">Active</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🌐</div>
+      <div>
+        <div class="cert-name">CCNA</div>
+        <div class="cert-sub">Cisco · CSCO14034172</div>
+        <div class="cert-badge badge-renew">Up for Renewal</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🛡</div>
+      <div>
+        <div class="cert-name">Security+</div>
+        <div class="cert-sub">CompTIA</div>
+        <div class="cert-badge badge-renew">Up for Renewal</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">💻</div>
+      <div>
+        <div class="cert-name">A+</div>
+        <div class="cert-sub">CompTIA</div>
+        <div class="cert-badge badge-active">Active</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills-grid">
+    <span class="skill-pill">Microsoft 365</span>
+    <span class="skill-pill">Intune / Autopilot</span>
+    <span class="skill-pill">Entra ID / Azure AD</span>
+    <span class="skill-pill">PowerShell</span>
+    <span class="skill-pill">Fortinet VPN</span>
+    <span class="skill-pill">ServiceNow</span>
+    <span class="skill-pill">CrowdStrike Falcon</span>
+    <span class="skill-pill">Microsoft Sentinel</span>
+    <span class="skill-pill">Proxmox</span>
+    <span class="skill-pill">Active Directory</span>
+    <span class="skill-pill">Mimecast</span>
+    <span class="skill-pill">Power Automate</span>
+    <span class="skill-pill">Group Policy</span>
+    <span class="skill-pill">Networking / VLANs</span>
+    <span class="skill-pill">Python (learning)</span>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">Work History</div>
+  <div class="section-title">Experience</div>
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-date">Oct 2023<br>→ Present</div>
+      <div>
+        <div class="tl-company">RWE Clean Energy</div>
+        <div class="tl-role">IT Floorwalker Engineer (Tier-2/3)</div>
+        <div class="tl-desc">Tier-2/3 escalation engineer supporting 1,000+ end users across US offices. Lead printer refresh and peripheral upgrade projects in coordination with Facilities and Central IT (UK/Germany). Manage endpoint deployments via Intune, Entra ID, and Autopilot. Administer Fortinet VPN and ServiceNow ITSM workflows. Built automation flows in Power Automate including an AI-powered daily briefing pipeline.</div>
+        <div class="tl-tags">
+          <span class="tl-tag">M365</span><span class="tl-tag">Intune</span><span class="tl-tag">Entra ID</span><span class="tl-tag">PowerShell</span><span class="tl-tag">ServiceNow</span><span class="tl-tag">Fortinet VPN</span><span class="tl-tag">Power Automate</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-date">Oct 2021<br>→ Oct 2023</div>
+      <div>
+        <div class="tl-company">Actylis</div>
+        <div class="tl-role">Helpdesk Technician</div>
+        <div class="tl-desc">Provided support for the main organization and 14 remote offices across North America, Europe, and Asia. Monitored and hardened 150+ hosts using CrowdStrike Falcon. Proactively blocked phishing attempts through Mimecast monitoring. Led migration of on-premises file servers to SharePoint and transitioned 90+ hosts to Microsoft Intune and Autopilot.</div>
+        <div class="tl-tags">
+          <span class="tl-tag">CrowdStrike</span><span class="tl-tag">Mimecast</span><span class="tl-tag">Intune</span><span class="tl-tag">SharePoint</span><span class="tl-tag">Autopilot</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-date">Jul 2020<br>→ Oct 2021</div>
+      <div>
+        <div class="tl-company">A&A Industrial</div>
+        <div class="tl-role">Sales Coordinator</div>
+        <div class="tl-desc">Daily client consultations with 10+ companies to assess equipment needs. Collaborated with 20+ distributors on pricing and inventory. Handled internal IT, networking, and software troubleshooting in a small office environment.</div>
+        <div class="tl-tags">
+          <span class="tl-tag">Client Relations</span><span class="tl-tag">IT Support</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label">Portfolio</div>
+  <div class="section-title">Projects</div>
+  <div class="projects-grid">
+
+    <div class="proj-card">
+      <div class="proj-header">
+        <div class="proj-icon">🍯</div>
+        <a class="proj-link" href="https://github.com/willirey/Azure-Honeypot-Lab" target="_blank">View on GitHub ↗</a>
+      </div>
+      <div class="proj-name">Azure Honeypot Lab</div>
+      <div class="proj-desc">Deployed a honeypot in Azure to capture failed RDP attempts. Used Microsoft Sentinel to ingest logs and map attacker IP addresses geographically. Gained hands-on SIEM and PowerShell experience.</div>
+      <div class="proj-stack">
+        <span class="proj-tag">Azure</span><span class="proj-tag">Microsoft Sentinel</span><span class="proj-tag">PowerShell</span><span class="proj-tag">SIEM</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-header">
+        <div class="proj-icon">🖥</div>
+        <a class="proj-link" href="https://github.com/willirey/Homelab" target="_blank">View on GitHub ↗</a>
+      </div>
+      <div class="proj-name">Homelab — Proxmox + Palo Alto</div>
+      <div class="proj-desc">Self-hosted virtualization lab on a Lenovo ThinkStation running Proxmox. Includes a Cisco SG300 switch, Palo Alto PA-220 firewall, Windows Server AD domain, Pi-hole DNS, VLANs, and planned Splunk/GOAD integration.</div>
+      <div class="proj-stack">
+        <span class="proj-tag">Proxmox</span><span class="proj-tag">Palo Alto</span><span class="proj-tag">Active Directory</span><span class="proj-tag">VLANs</span><span class="proj-tag">Pi-hole</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-header">
+        <div class="proj-icon">⚙️</div>
+        <a class="proj-link" href="https://github.com/willirey" target="_blank">View on GitHub ↗</a>
+      </div>
+      <div class="proj-name">PowerShell Automation Scripts</div>
+      <div class="proj-desc">Collection of enterprise automation scripts including HP Image Assistant (HPIA) remote deployment, printer status monitoring, and ITSM workflow helpers. Built for real-world production use at RWE.</div>
+      <div class="proj-stack">
+        <span class="proj-tag">PowerShell</span><span class="proj-tag">Task Scheduler</span><span class="proj-tag">Intune</span><span class="proj-tag">HPIA</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-header">
+        <div class="proj-icon">🤖</div>
+        <a class="proj-link" href="https://github.com/willirey" target="_blank">View on GitHub ↗</a>
+      </div>
+      <div class="proj-name">AI-Powered Daily Briefing</div>
+      <div class="proj-desc">Built a 12-step Microsoft Power Automate flow using AI Builder to generate and deliver a personalized daily briefing email. Documented end-to-end in a Word build guide for team replication.</div>
+      <div class="proj-stack">
+        <span class="proj-tag">Power Automate</span><span class="proj-tag">AI Builder</span><span class="proj-tag">M365</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-label">Academic Background</div>
+  <div class="section-title">Education</div>
+  <div class="edu-grid">
+    <div class="edu-card">
+      <div class="edu-school">Farmingdale State University</div>
+      <div class="edu-degree">B.S. Computer Programming & Information Systems</div>
+      <div class="edu-year">2022</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-school">Nassau Community College</div>
+      <div class="edu-degree">A.A.S. Information Technology</div>
+      <div class="edu-year">2019</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">Let's Connect</div>
+  <div class="section-title">Contact</div>
+  <div class="contact-card">
+    <div class="contact-text">
+      <h3>Open to cybersecurity, cloud & DevSecOps roles.</h3>
+      <p>Currently based in New York. Available for on-site, hybrid, or remote positions.</p>
+    </div>
+    <div class="contact-links">
+      <a class="btn btn-primary" href="mailto:reyeselwil@gmail.com">✉ Email Me</a>
+      <a class="btn btn-ghost" href="https://github.com/willirey" target="_blank">⬡ GitHub</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/willreyes" target="_blank">in LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Will Reyes · IT Engineer & Security Professional · Built with purpose, not pasta. 🍝</p>
+</footer>
+
+<script>
+  let dark=true;
+  function toggleTheme(){
+    dark=!dark;
+    document.body.classList.toggle('light',!dark);
+    document.getElementById('themeBtn').textContent=dark?'☀ Light':'🌙 Dark';
+  }
+</script>
+</body>
+</html>
